@@ -1,0 +1,339 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local MainFrame = Instance.new("Frame")
+local Frame = Instance.new("Frame")
+local TextButton = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local TextButton_2 = Instance.new("TextButton")
+local TextLabel_2 = Instance.new("TextLabel")
+local TextLabel_3 = Instance.new("TextLabel")
+local TextButton_3 = Instance.new("TextButton")
+local TextButton_4 = Instance.new("TextButton")
+local TextButton_5 = Instance.new("TextButton")
+local TextButton_6 = Instance.new("TextButton")
+local TextButton_7 = Instance.new("TextButton")
+local developer = Instance.new("TextLabel")
+local TextBox = Instance.new("TextBox")
+
+--Properties:
+ScreenGui.Parent = game:GetService("CoreGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.ResetOnSpawn = false
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = ScreenGui
+MainFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MainFrame.BackgroundTransparency = 1.000
+MainFrame.Position = UDim2.new(0.400028821, 0, 0.1397614315, 0)
+MainFrame.Size = UDim2.new(0, 253, 0, 293)
+MainFrame.Draggable = true
+MainFrame.Selectable = true
+MainFrame.Active = true
+
+Frame.Parent = MainFrame
+Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BackgroundTransparency = 0.500
+Frame.Position = UDim2.new(-0.000111103058, 0, -6.47902489e-05, 0)
+Frame.Size = UDim2.new(0, 253, 0, 26)
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.BackgroundTransparency = 1.000
+TextButton.Position = UDim2.new(0.889328063, 0, 0.0384615399, 0)
+TextButton.Size = UDim2.new(0, 27, 0, 25)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "+"
+TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextScaled = true
+TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
+TextButton.MouseButton1Down:connect(function()
+	if ScrollingFrame.Visible == false then
+		ScrollingFrame.Visible = true
+		TextButton.Text = "-"
+	else
+		ScrollingFrame.Visible = false
+		TextButton.Text = "+"
+	end
+end)
+
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.0017107937, 0, 0, 0)
+TextLabel.Size = UDim2.new(0, 251, 0, 25)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Squid Game Menu"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+ScrollingFrame.Parent = MainFrame
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ScrollingFrame.BackgroundTransparency = 0.500
+ScrollingFrame.Position = UDim2.new(0.000512526429, 0, 0.112262242, 0)
+ScrollingFrame.Size = UDim2.new(0, 253, 0, 260)
+
+TextButton_2.Parent = ScrollingFrame
+TextButton_2.BackgroundColor3 = Color3.fromRGB(0, 221, 255)
+TextButton_2.BackgroundTransparency = 0.800
+TextButton_2.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextButton_2.Position = UDim2.new(-0.00790513866, 0, 0.0838314816, 0) -- 1.yan 2.yukarı aşağı 3.ileri geri
+TextButton_2.Size = UDim2.new(0, 251, 0, 47)
+TextButton_2.Font = Enum.Font.SourceSans
+TextButton_2.Text = "Teleport Game Play"
+TextButton_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_2.TextSize = 18.000
+TextButton_2.MouseButton1Down:connect(function()
+	local plr = game.Players.LocalPlayer
+	local char = plr.Character
+	char.HumanoidRootPart.CFrame = CFrame.new(-30,5,-105)
+end)
+
+TextLabel_2.Parent = ScrollingFrame
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel_2.Position = UDim2.new(-9.31322575e-10, 0, 0, 0)
+TextLabel_2.Size = UDim2.new(0, 250, 0, 50)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "---Teloport---"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextSize = 30.000
+TextLabel_2.TextWrapped = true
+
+TextButton_3.Parent = ScrollingFrame
+TextButton_3.BackgroundColor3 = Color3.fromRGB(209, 255, 0)
+TextButton_3.BackgroundTransparency = 0.800
+TextButton_3.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextButton_3.Position = UDim2.new(-0.00800000038, 0, 0.168206483, 0)
+TextButton_3.Size = UDim2.new(0, 251, 0, 47)
+TextButton_3.Font = Enum.Font.SourceSans
+TextButton_3.Text = "Teleport Safe"
+TextButton_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_3.TextSize = 18.000
+TextButton_3.MouseButton1Down:connect(function()
+	local plr = game.Players.LocalPlayer
+	local char = plr.Character
+	char.HumanoidRootPart.CFrame = CFrame.new(-129.8,15.0625,-660.95) -- 1.yan 2.yukarı aşağı 3.ileri geri
+end)
+
+TextButton_4.Parent = ScrollingFrame
+TextButton_4.BackgroundColor3 = Color3.fromRGB(209, 255, 0)
+TextButton_4.BackgroundTransparency = 0.800
+TextButton_4.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextButton_4.Position = UDim2.new(-0.00800000038, 0, 0.248293519, 0)
+TextButton_4.Size = UDim2.new(0, 251, 0, 47)
+TextButton_4.Font = Enum.Font.SourceSans
+TextButton_4.Text = "Teleport All Glass"
+TextButton_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_4.TextSize = 18.000
+TextButton_4.MouseButton1Down:connect(function()
+	local plr = game.Players.LocalPlayer
+	local char = plr.Character
+    local spt = 0.1
+	char.HumanoidRootPart.CFrame = CFrame.new(-332,-125.6,-355.425)
+    wait(spt)
+    char.HumanoidRootPart.CFrame = CFrame.new(-342,-125.6,-355.425)
+    wait(spt)
+    char.HumanoidRootPart.CFrame = CFrame.new(-332,-125.6,-344.425)
+    wait(spt)
+    char.HumanoidRootPart.CFrame = CFrame.new(-342,-125.6,-344.425)
+    wait(spt)
+    char.HumanoidRootPart.CFrame = CFrame.new(-332,-125.6,-333.425)
+    wait(spt)
+    char.HumanoidRootPart.CFrame = CFrame.new(-342,-125.6,-333.425)
+    wait(spt)
+    char.HumanoidRootPart.CFrame = CFrame.new(-332,-125.6,-322.425)
+    wait(spt)
+    char.HumanoidRootPart.CFrame = CFrame.new(-342,-125.6,-322.425)
+    wait(spt)
+    char.HumanoidRootPart.CFrame = CFrame.new(-332,-125.6,-311.425)
+    wait(spt)
+    char.HumanoidRootPart.CFrame = CFrame.new(-342,-125.6,-311.425)
+    wait(spt)
+    char.HumanoidRootPart.CFrame = CFrame.new(-332,-125.6,-300.425)
+    wait(spt)
+    char.HumanoidRootPart.CFrame = CFrame.new(-342,-125.6,-300.425)
+    wait(spt)
+    char.HumanoidRootPart.CFrame = CFrame.new(-332,-125.6,-299.425)
+    wait(spt)
+    char.HumanoidRootPart.CFrame = CFrame.new(-342,-125.6,-299.425)
+    wait(spt)
+    char.HumanoidRootPart.CFrame = CFrame.new(-332,-125.6,-288.425)
+    wait(spt)
+    char.HumanoidRootPart.CFrame = CFrame.new(-342,-125.6,-288.425)
+    wait(spt)
+    char.HumanoidRootPart.CFrame = CFrame.new(-332,-125.6,-277.425)
+    wait(spt)
+    char.HumanoidRootPart.CFrame = CFrame.new(-342,-125.6,-277.425)
+    wait(spt)
+    char.HumanoidRootPart.CFrame = CFrame.new(-332,-125.6,-266.425)
+    wait(spt)
+    char.HumanoidRootPart.CFrame = CFrame.new(-342,-125.6,-266.425)
+    wait(spt)
+    char.HumanoidRootPart.CFrame = CFrame.new(-332,-125.6,-255.425)
+    wait(spt)
+    char.HumanoidRootPart.CFrame = CFrame.new(-342,-125.6,-255.425)
+    wait(spt)
+    char.HumanoidRootPart.CFrame = CFrame.new(-332,-125.6,-244.425)
+    wait(spt)
+    char.HumanoidRootPart.CFrame = CFrame.new(-342,-125.6,-244.425)
+    wait(spt)
+    char.HumanoidRootPart.CFrame = CFrame.new(-332,-125.6,-233.425)
+    wait(spt)
+    char.HumanoidRootPart.CFrame = CFrame.new(-342,-125.6,-233.425)
+    wait(spt)
+    char.HumanoidRootPart.CFrame = CFrame.new(-332,-125.6,-222.425)
+    wait(spt)
+    char.HumanoidRootPart.CFrame = CFrame.new(-342,-125.6,-222.425)
+    wait(spt)
+    char.HumanoidRootPart.CFrame = CFrame.new(-332,-125.6,-211.425)
+    wait(spt)
+    char.HumanoidRootPart.CFrame = CFrame.new(-342,-125.6,-211.425)
+    wait(spt)
+    char.HumanoidRootPart.CFrame = CFrame.new(-342,-118.6,-189.425)    -- 1.yan 2.yukarı aşağı 3.ileri geri
+end)
+TextButton_5.Parent = ScrollingFrame
+TextButton_5.BackgroundColor3 = Color3.fromRGB(209, 255, 0)
+TextButton_5.BackgroundTransparency = 0.800
+TextButton_5.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextButton_5.Position = UDim2.new(-0.00800000038, 0, 0.328506483, 0)
+TextButton_5.Size = UDim2.new(0, 251, 0, 47)
+TextButton_5.Font = Enum.Font.SourceSans
+TextButton_5.Text = "Teleport Dormitory"
+TextButton_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_5.TextSize = 18.000
+TextButton_5.MouseButton1Down:connect(function()
+	local plr = game.Players.LocalPlayer
+	local char = plr.Character
+	char.HumanoidRootPart.CFrame = CFrame.new(-27.325, -70.025, -572.438) -- 1.yan 2.yukarı aşağı 3.ileri geri
+end)
+TextLabel_3.Parent = ScrollingFrame
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel_3.Position = UDim2.new(-9.31322575e-10, 0, 0.400506483, 0)
+TextLabel_3.Size = UDim2.new(0, 250, 0, 50)
+TextLabel_3.Font = Enum.Font.SourceSans
+TextLabel_3.Text = "---Others---"
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.TextSize = 30.000
+TextLabel_3.TextWrapped = true
+
+TextButton_6.Parent = ScrollingFrame
+TextButton_6.BackgroundColor3 = Color3.fromRGB(209, 255, 0)
+TextButton_6.BackgroundTransparency = 0.800
+TextButton_6.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextButton_6.Position = UDim2.new(-0.00800000038, 0, 0.490506483, 0)
+TextButton_6.Size = UDim2.new(0, 251, 0, 47)
+TextButton_6.Font = Enum.Font.SourceSans
+TextButton_6.Text = "Speed: OFF"
+TextButton_6.TextColor3 = Color3.fromRGB(255,0,0)
+TextButton_6.TextSize = 18.000
+local speed = false
+TextButton_6.MouseButton1Down:connect(function()
+if speed == false then
+        speed = true
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
+		TextButton_6.Text = "Speed: ON"
+        TextButton_6.TextColor3 = Color3.fromRGB(0,128,0)
+	else
+		speed = false
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+		TextButton_6.Text = "Speed: OFF"
+        TextButton_6.TextColor3 = Color3.fromRGB(255,0,0)
+	end
+end)
+
+TextBox.Parent = ScrollingFrame
+TextBox.BackgroundColor3 = Color3.fromRGB(255,0,0)
+TextBox.BackgroundTransparency = 0.800
+TextBox.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextBox.Position = UDim2.new(-0.00800000038, 0, 0.590506483, 0)
+TextBox.Size = UDim2.new(0, 251, 0, 47)
+TextBox.Font = Enum.Font.SourceSans
+TextBox.PlaceholderColor3 = Color3.fromRGB(190, 190, 190)
+TextBox.Text = ""
+TextBox.PlaceholderText = "Player Nick"
+TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.TextSize = 18.000
+TextBox.Changed:connect(function()
+    if TextBox.Text == "" then
+    TextButton_7.Text = "Kill All"
+    else
+    TextButton_7.Text = "Kill Player"
+    end
+end)
+
+TextButton_7.Parent = ScrollingFrame
+TextButton_7.BackgroundColor3 = Color3.fromRGB(255,0,0)
+TextButton_7.BackgroundTransparency = 0.800
+TextButton_7.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextButton_7.Position = UDim2.new(-0.00800000038, 0, 0.690506483, 0)
+TextButton_7.Size = UDim2.new(0, 251, 0, 47)
+TextButton_7.Font = Enum.Font.SourceSans
+TextButton_7.Text = "Kill All"
+TextButton_7.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_7.TextSize = 18.000
+TextButton_7.MouseButton1Down:connect(function()
+ if TextBox.Text == "" then
+
+	for i=1,15 do
+   for i,v in next,game.Players:GetPlayers()do
+       if v~=game.Players.LocalPlayer then
+           game.ReplicatedStorage.Remotes.Replication:FireServer(v.Character.Humanoid,10)
+       end
+   end
+end
+    else
+  local players = game:GetService("Players")
+  local targetPlayer = players:FindFirstChild(TextBox.Text)
+     game.ReplicatedStorage.Remotes.Replication:FireServer(targetPlayer.Character.Humanoid,100)
+    end
+end)
+
+developer.Parent = ScrollingFrame
+developer.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+developer.BackgroundTransparency = 1.000
+developer.BorderColor3 = Color3.fromRGB(27, 42, 53)
+developer.Position = UDim2.new(-9.31322575e-10, 0, 0.790506483, 0)
+developer.Size = UDim2.new(0, 250, 0, 100)
+developer.Font = Enum.Font.SourceSans
+developer.Text = "Developer: TheLord_ofDemons"
+developer.TextColor3 = Color3.fromRGB(255, 255, 255)
+developer.TextSize = 25.000
+developer.Selectable = false
+developer.TextWrapped = true
+
+local UserInputService = game:GetService('UserInputService')
+local menu = false
+UserInputService.InputBegan:connect(function(Input, Processed)
+	if Input.UserInputType == Enum.UserInputType.Keyboard then
+		if Input.KeyCode == Enum.KeyCode.LeftShift then
+			if menu == true then
+				menu = false
+				MainFrame.Visible = false
+			else
+				menu = true
+				MainFrame.Visible = true
+			end
+		elseif Input.KeyCode == Enum.KeyCode.RightShift then
+			if menu == true then
+				menu = false
+				MainFrame.Visible = false
+			else
+				menu = true
+				MainFrame.Visible = true
+			end
+		end
+	end
+end)
