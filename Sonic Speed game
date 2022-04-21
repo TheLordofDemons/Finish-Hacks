@@ -3,8 +3,8 @@ repeat wait() until game:IsLoaded();
 
 -- Global toggles
 getrenv().AutoStep = false; -- Allways on
-getrenv().AutoRebirth = true;
-getrenv().AutoCollect = true;
+getrenv().AutoRebirth = false;
+getrenv().AutoCollect = false;
 getrenv().AutoBankRewards = true;
 
 -- Random Locals
