@@ -28,7 +28,7 @@ end
 local Luminosity = loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/UILibs/LuminosityV1.lua"))()
 
 -- Main UI Stuff
-local Window = Luminosity.new("Sonic Speed Sim", "By TheLord_ofDemons",)
+local Window = Luminosity.new("Sonic Speed Sim", "By TheLord_ofDemons", 1290583218)
 local AutoFarm = Window.Tab("Auto Farm")
 
 -- Auto Steps
