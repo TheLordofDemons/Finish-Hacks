@@ -5,7 +5,7 @@ repeat wait() until game:IsLoaded();
 getrenv().AutoStep = false; -- Allways on
 getrenv().AutoRebirth = false;
 getrenv().AutoCollect = false;
-getrenv().AutoBankRewards = true;
+getrenv().AutoBankRewards = false;
 
 -- Random Locals
 local Players = game:GetService("Players");
