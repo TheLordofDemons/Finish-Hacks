@@ -124,7 +124,11 @@ spawn(function()
     end
 end)
 
---> Main <--
+local FastCFrame = CFrame.new(0,0,0)
+local OldNamecall = nil
+
+
+
 OldNamecall = hookmetamethod(game, '__namecall', function(self,...)
     local args = {...}
     local method = getnamecallmethod()
@@ -147,7 +151,6 @@ end)
 
 
 
---> Loops <--
 game:GetService('RunService').Heartbeat:Connect(function()
     FastCFrame = FastCFrame + Vector3.new(10,10,10)
 end)
